@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakash-website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d4d0295c9f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li> 
+                <li><a href="#services">PROJECT</a></li>
+                 
+                 <li><a href="#contact">CONTACT</a></li>
+                 <i class="fa-regular fa-circle-xmark"onclick="closemenu()" ></i>
+            </ul>
+            <i class="fa-solid fa-bars "onclick="openmenu()"></i>
+        </nav>
+<div class="header-text">
+<p> Software Engineer</p>
+<h1> Hi, I'am<span > Prakash</span> <br>Sivasankar from India</h1></div>
+
+    </div>
+
+</div>
+
+
+<div id = "about">
+    <div class = "container">
+        <div class = "rows">
+            <div class = "about-col-1">
+                <img src="/image/img05.jpg" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub">About Me</h1>
+                <p class="par">As a recent graduate in M.Tech(Software Engineering), I am passionate about software development and eager to embark on a fulfilling career in the field. Equipped with solid theoretical knowledge and practical skills in Java , SQL, Web DEvelopement. I am enthusiastic about contributing to innovative projects and learning from experienced professionals. I thrive in collaborative environments where I can leverage my problem-solving abilities and adaptability to tackle new challenges. Committed to continuous learning and staying updated with industry trends, I am excited about the opportunities to grow and make meaningful contributions to the world of software engineering. Let's connect and explore how I can bring value to your team!
+                 
+                </p>
+                <div class="tab-tittle">
+                    <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-link"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="content active-tag" id="skills">
+                    <ul>
+                        <li><span>HTML,CSS,Javascrip</span><br>Designing web/App interface</li>
+                        <li><span>Java</span><br>Banckend Development with Java</li>
+                        <li><span>SQL</span><br>Database management</li>
+                    </ul>
+                </div>
+                <div class="content" id="education">
+                    <ul>
+                        <li><span>vellore Institute of Technology</span><br>M.Tech Integrated Software engineering(2019 - 2024)</li>
+                        <li><span>Adhiyaman Matric Higher sec school</span><br>12th Grading level</li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----services-->
+<div id="services">
+    <div class="container3">
+        <h1 class="sub">My Projects</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Car ordering Application</h2>
+                <br>
+                <p>The project involved building simple java application that facilitates the car ordering service. For front-end java swing was used and for back - end mysql was used to build this application </p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>heart health prediction</h2><br>
+                <p>This Project uses Machine Learning approach .It involves predicting heart health using different classifiers like Logistic Regression Algorithm and Random forest </p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Skin Cancer Detection</h2><br>
+                <p>This project uses Deep learning approach.The project involves detecting skin cancer using Deep learning algorithm, convolution neural network . It was build in python language. </p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----contact-->
+<div id="contact">
+    <div class = container4>
+        <div class="rows">
+            <div class="left"><h1 class="title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>prakash72865@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>9361372865</p>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/prakash__2108?igsh=cnh2NGI2MGxwMzI1"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/prakash-s-797a34200?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></i></a>
+                </div>
+                <a href="/image/Prakash's Resume.pdf" class="btn btn2" >Download CV</a>
+            </div>
+                <div class="right">
+
+                    <form class="form1" name ="submit-to-google-sheet" >
+                        <input type="text"  name="Name" placeholder="Your Name"required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="message" rows="6" placeholder="your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+
+                
+
+        </div>
+    </div>
+    <div class="copyrights">
+        <p>copyright © Prakash.  </p>
+    </div>
+</div>
+<script>
+    var conts = document.getElementsByClassName("container");
+    var contnts = document.getElementsByClassName("content");
+    function opentab(name)
+        {
+            for(cont of conts)
+            {
+                cont.classList.remove("active-link");
+            }
+            for(contnt of contnts)
+            {
+                contnt.classList.remove("active-tag");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(name).classList.add("active-tag");
+
+        }
+    
+</script>
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx2QagOJV8rn5PiDvk_FRyoycnD0YMOceBWIDBiNP6_MgpcYmKiqtQVCawp1KjIWxJY/exec'
+    const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => msg.innerHTML = "message sent successfully")
+           setTimeout(function(){
+            msg.innerHTML = " "
+           },5000)
+           form.reset()
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
